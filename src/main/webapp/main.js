@@ -6,7 +6,7 @@
       if(entry.isIntersecting){
         // stagger cards a bit
         if(entry.target.classList.contains('feature-card')){
-          setTimeout(()=>entry.target.classList.add('in-view'), 80 * (Array.from(document.querySelectorAll('.feature-card')).indexOf(entry.target) + 1));
+          setTimeout(()=>entry.target.classList.add('in-view'), 120 * (Array.from(document.querySelectorAll('.feature-card')).indexOf(entry.target) + 1));
         } else {
           entry.target.classList.add('in-view');
         }
