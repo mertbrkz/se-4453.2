@@ -1,9 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basit Web Sitesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Basit örnek web sitesi">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <header class="site-header">
+        <div class="container">
+            <h1>Basit Web Sitesi</h1>
+            <nav>
+                <a href="#home">Ana Sayfa</a>
+                <a href="#features">Özellikler</a>
+                <a href="#contact">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2 class="hero-title">Hoş geldiniz!</h2>
+                <p class="lead">Bu, GitHub'a yollayıp issue oluşturacağımız, renkli ve animasyonlu basit bir web sitesi örneğidir.</p>
+                <a class="btn" href="#contact">İletişime Geç</a>
+            </div>
+        </section>
+
+        <section id="features" class="container py-8">
+            <h3 class="text-2xl font-semibold text-white mb-6">Özellikler</h3>
+            <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="feature-card p-6 rounded-2xl bg-gradient-to-br from-white/3 to-transparent backdrop-blur-sm">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/6">
+                            <!-- phone icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h10v10H7z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">Mobil uyumlu tasarım</h4>
+                            <p class="text-sm text-white/80">Tüm cihazlarda düzgün görünür ve çalışır.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6 rounded-2xl bg-gradient-to-br from-white/3 to-transparent backdrop-blur-sm">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/6">
+                            <!-- layout icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M3 12h18M3 17h18"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">Temiz, modern arayüz</h4>
+                            <p class="text-sm text-white/80">Minimal ve kullanıcı dostu tasarım.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card p-6 rounded-2xl bg-gradient-to-br from-white/3 to-transparent backdrop-blur-sm">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/6">
+                            <!-- git icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 00-2 2v.26A2.99 2.99 0 008 7.11V7a2 2 0 100 4v6a2 2 0 104 0v-6a2 2 0 100-4v-.11A2.99 2.99 0 0014 4.26V4a2 2 0 00-2-2z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">Kolay sürüm ve paylaşım</h4>
+                            <p class="text-sm text-white/80">Projeyi Git ile sürümleyip GitHub'a hızlıca yükleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container contact">
+            <h3>İletişim</h3>
+            <p>Bir şeyler denemek için aşağıdaki formu kullanabilirsiniz (form gönderimi sunucu gerektirir).</p>
+            <form>
+                <label for="name">İsim</label>
+                <input id="name" name="name" placeholder="İsminiz">
+
+                <label for="email">E-posta</label>
+                <input id="email" name="email" placeholder="you@example.com">
+
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="4" placeholder="Mesajınız..."></textarea>
+
+                <button type="button" class="btn">Gönder (örnek)</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Basit Web Sitesi</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
